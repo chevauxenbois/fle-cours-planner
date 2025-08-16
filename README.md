@@ -1,73 +1,72 @@
-<<<<<<< HEAD
-# fle-cours-planner
-=======
-# React + TypeScript + Vite
+📘 FLE Cours Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React + Tailwind web app to generate ready-to-use lesson plans for FLE (Français Langue Étrangère) classes.
+It follows the standard méthodologie FLE for working with written documents (CE), oral documents (CO), and grammar concepts.
 
-Currently, two official plugins are available:
+Teachers can select modules, enter durations, add objectives, and instantly get a structured plan.
+The plan can then be copied, exported to PDF, or exported to DOCX for sharing or printing.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
 
-## Expanding the ESLint configuration
+Auto-generate lesson plans with the FLE methodology
+Supports Compréhension Écrite (CE), Compréhension Orale (CO), and Grammaire
+Add custom durations and objectives
+Add references for exercises (pages, links)
+Add production consignes (written/oral)
+Clean UI built with React + TailwindCSS
+Export your plan as PDF or DOCX in one click
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Getting Started
+1. Clone the repo
+git clone https://github.com/chevauxenbois/fle-cours-planner.git
+cd fle-cours-planner
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. Install dependencies
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+3. Run locally
+npm run dev
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then open the printed URL (e.g. http://localhost:5173).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+4. Build for production
+npm run build
+npm run preview
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
->>>>>>> e244074 (feat: FLE Planner (React + Tailwind + PDF/DOCX))
+🌐 Deployment (GitHub Pages)
+
+This repo is configured for GitHub Pages.
+On every push to main, it auto-deploys using GitHub Actions.
+
+Live app will be available at:
+👉 https://chevauxenbois.github.io/fle-cours-planner/
+
+📖 Example Use Cases
+
+Prepare a 90-minute CE + Grammaire lesson plan
+
+Create a CO activity with follow-up production in minutes
+
+Share structured lesson plans with colleagues in PDF/DOCX format
+
+🛠️ Tech Stack
+
+React
+
+Vite
+
+TailwindCSS
+
+docx (for Word export)
+
+jsPDF (for PDF export)
+
+Contributing
+
+Pull requests are welcome!
+If you’d like to suggest improvements (new fields, better exports, etc.), feel free to fork and open a PR.
+
+📜 License
+
+MIT © 2025 – chevauxenbois
